@@ -14,11 +14,11 @@
 
 pub contract Escrow {
 
-    pub let bountys: @{UInt64: Bounty}
-    pub let claims: {UInt64: Claim} 
+    priv let bountys: @{UInt64: Bounty}
+    priv let claims: {UInt64: Claim} 
 
-    pub var nextbountyId: UInt64
-    pub var nextClaimId: UInt64
+    priv var nextbountyId: UInt64
+    priv var nextClaimId: UInt64
 
     pub event BountyCreated(bountyId: UInt64, message: String)
     pub event ClaimCreated(claimId: UInt64, bountyId: UInt64, message: String)
